@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  spring-app:
+    image: 4fff7be00793e5d619b7fd213788d98d21f0298712ade797d51d2f22fc7a2dae
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: springappdb
+    ports:
+      - "3336:3306"
