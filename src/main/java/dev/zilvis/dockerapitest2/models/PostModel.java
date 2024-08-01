@@ -17,9 +17,7 @@ public class PostModel {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private UserModel userModel;
+    private Long user_id;
 
     private String title;
     private String content;
