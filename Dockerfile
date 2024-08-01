@@ -12,6 +12,7 @@ COPY src /app/src
 
 RUN mvn clean package
 
+
 EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "target/dockerapitest2-0.0.1-SNAPSHOT.jar"]
